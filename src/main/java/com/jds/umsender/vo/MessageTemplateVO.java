@@ -13,13 +13,7 @@ public class MessageTemplateVO extends BaseAuditVO {
 	private String messageContent;
 	private boolean useYn;
 	private String templateVariable;
-	private String[] tempVarArray;
-	
-	public void setTemplateVariable(String var) {
-		this.templateVariable = var;
-		
-		this.tempVarArray = var.split("#");
-	}
+
 	
 
 }
