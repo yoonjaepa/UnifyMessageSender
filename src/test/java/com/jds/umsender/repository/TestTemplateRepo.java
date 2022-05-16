@@ -9,7 +9,12 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import com.jds.umsender.vo.MessageTemplateVO;
+
+import lombok.extern.slf4j.Slf4j;
+
 @SpringBootTest
+@Slf4j
 class TestTemplateRepo {
 	
 	@Autowired
@@ -27,7 +32,10 @@ class TestTemplateRepo {
 	
 	@Test
 	void test() {
-		repo.findByTemplateCode(setParameter()).toString();
+		MessageTemplateVO vo = repo.findByTemplateCode(setParameter());
+		
+		log.info("registId : {} ",vo.getRegistId());
+		
 	}
 
 }
