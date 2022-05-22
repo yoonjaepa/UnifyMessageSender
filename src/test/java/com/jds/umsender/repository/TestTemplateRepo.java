@@ -1,6 +1,5 @@
 package com.jds.umsender.repository;
 
-import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -25,7 +24,6 @@ class TestTemplateRepo {
 		Map<String, String> params = new HashMap<String, String>();
 		
 		params.put("templateCd", "T0001");
-		params.put("mediaCd", "MI001");
 		
 		return params;
 	}

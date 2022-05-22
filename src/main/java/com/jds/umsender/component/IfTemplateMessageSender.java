@@ -1,8 +1,8 @@
-package com.jds.umsender.service;
+package com.jds.umsender.component;
 
 import com.jds.umsender.vo.RequestMasterVO;
 
-public interface IfTemplateMessageBuilder {
+public interface IfTemplateMessageSender {
 	
 	public  void	sendMessage(RequestMasterVO request);
 }

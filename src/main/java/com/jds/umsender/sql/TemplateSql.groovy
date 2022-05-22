@@ -43,7 +43,6 @@ class TemplateSql {
 			FROM kvaram_ums.TB_TMPLT_INFO
 			WHERE
 				TMPLT_CD = :templateCd
-				AND MEDIA_CD = :mediaCd
 			;
 	""";
 }

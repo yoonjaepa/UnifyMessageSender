@@ -16,6 +16,7 @@ public  class RequestMasterVO extends BaseAuditVO {
 	private String				channelUid;
 	private String 				bizCustUid;
 	private LocalDateTime		requestRecieveDttm;
+	private String				templateCd;
 	private Boolean 			isTemplate;
 	private Boolean 			isMass;
 	private String				requestChannelIp;

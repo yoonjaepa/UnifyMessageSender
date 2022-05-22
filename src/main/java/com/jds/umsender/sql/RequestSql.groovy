@@ -16,6 +16,7 @@ class RequestSql {
 						CHNNL_UID, 
 						BIZCUST_UID, 
 						REQ_RCV_DTTM, 
+						TMPLT_CD,
 						TMPLT_YN, 
 						MASS_YN, 
 						REQ_CHNNL_IP, 
@@ -38,6 +39,7 @@ class RequestSql {
 						,:channelUid
 						,:bizCustUid          
 						,:requestRecieveDttm  
+						,:templateCd
 						,:isTemplate              
 						,:isMass        
 						,:requestChannelIp           

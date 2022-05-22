@@ -29,7 +29,7 @@ public class TemplateRepo {
 			.queryForObject(TemplateSql.SELECT_TEMPLATE_INFO,params, 
 						new BeanPropertyRowMapper<MessageTemplateVO>(MessageTemplateVO.class));		
 		
-		log.info("MessageTemplate : {} ", messageTemp.toString());
+		//log.info("MessageTemplate : {} ", messageTemp.toString());
 		
 		return messageTemp;
 		
