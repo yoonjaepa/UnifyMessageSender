@@ -225,7 +225,7 @@ class TestCommonMessageBuilder {
 		List<MessageTransferListVO> hist = commonMessageBuilder.buildMessageList(request);
 		
 		for(MessageTransferListVO msg : hist) {
-			assertEquals(TransferStatusCode.TRANSFER_COMPLETE.getTransCode()
+			assertEquals(TransferStatusCode.REQUEST_TRANSFER.getTransCode()
 					, msg.getTransferStatusCd());
 		}
 		
@@ -249,7 +249,7 @@ class TestCommonMessageBuilder {
 		List<MessageTransferListVO> hist = commonMessageBuilder.buildMessageList(request);
 		
 		for(MessageTransferListVO msg : hist) {
-			assertEquals(TransferStatusCode.TRANSFER_COMPLETE.getTransCode()
+			assertEquals(TransferStatusCode.TRANSFER_ERROR.getTransCode()
 					, msg.getTransferStatusCd());
 		}
 		

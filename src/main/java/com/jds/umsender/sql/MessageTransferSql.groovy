@@ -120,9 +120,9 @@ class MessageTransferSql {
 		SET 
 			TRNS_STTS_CD=:transferStatusCd,
 			TRNS_STTS_HST=:transferStatusHist,
-			ERR_CD=:errorCd
-			ERR_DETAIL=:errorDetail
-			MDFY_DATE=:modifyDttm, 
+			ERR_CD=:errorCd,
+			ERR_DETAIL=:errorDetail,
+			MDFY_DATE=now(),
 			MDFY_ID=:modifyId
 		WHERE
 			REQ_MST_UID = :requestMasterUid

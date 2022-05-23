@@ -7,6 +7,9 @@ public enum ErrorCode {
 	DataRegistException("ER501","데이터 등록 오류","데이터를 등록하는 과정에서 오류 발생"),
 	SelectMediaInfoFailException("ER510","미디어정보가져오기오류","미디어정보를 DB에서 가져오는 업무 실패"),
 	SelectTemplateFailException("ER511","템플릿정보가져오기오류","템플릿정보를 DB에서 가져오는 업무 실퍠"),
+	ServerCommunicationException("ER700","서버 통신 오류","서버와의 통신 오류"),
+	ServerAuthenticationException("ER200","서버 인증 오류","서버와의 인증 관련 오류"),
+	ServerWorkingException("ER300","서버 오류","서버의 비정상 동작으로 인한 오류"),
 	Exception("ER999","정의되지않은오류","정의되지 않은 오류");
 
 

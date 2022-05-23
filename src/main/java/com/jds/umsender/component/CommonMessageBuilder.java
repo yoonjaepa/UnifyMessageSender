@@ -120,6 +120,15 @@ public class CommonMessageBuilder {
 					//	메시지 본문에 파라메터 바인딩 하기 
 					message.setMessageContent(buildMessage(template.getMessageContent(), detail.getTemplateVariable()));
 					
+					//	미디어서버 정보 세팅하기
+					message.setMediaConfigInfo(mediaInfo.getMediaConfigInfo());
+					
+					//	Receiver 정보 세팅
+					message.setRecieverInfo(detail.getRecieverInfo());
+					
+					//	Sender 정보 세팅
+					message.setSenderInfo(detail.getSenderInfo());					
+					
 					//	전송상태 세팅(전송요청)
 					message.addTransferStatusHistList(TransferStatusCode.REQUEST_TRANSFER.getTransCode()
 									, TransferStatusCode.REQUEST_TRANSFER.getTransName());
@@ -209,7 +218,7 @@ public class CommonMessageBuilder {
 	 * 요청된 파라메터 정보가 템플릿과 동일한지 여부 확인 
 	 * @param param
 	 * @param reqParam
-	 * @return
+	 * @return₩
 	 */
 	protected boolean isMatchParameter(String param, Map<String, String> reqParam ) {
 		
@@ -267,10 +276,16 @@ public class CommonMessageBuilder {
 		return message;
 	}
 	
-	@SuppressWarnings("unused")
+
 	protected void registMessgeTransferList(List<MessageTransferListVO> messages) {
 		
 		transRepo.registBatchMessageTransfer(messages.toArray(new MessageTransferListVO[] {}));
+		
+	}
+	
+	protected void changeTransferStatus(List<MessageTransferListVO> messages) {
+		
+		transRepo.updateBatchMessageTransferStatus(messages.toArray(new MessageTransferListVO[] {}));
 		
 	}
 	

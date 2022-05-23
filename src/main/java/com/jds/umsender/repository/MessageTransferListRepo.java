@@ -53,4 +53,15 @@ public class MessageTransferListRepo {
 		return cnt;
 		
 	}
+	
+	public int[] updateBatchMessageTransferStatus(MessageTransferListVO[] transfer) {
+		int[] cnt ;
+		
+		SqlParameterSource[] params = SqlParameterSourceUtils.createBatch(transfer);
+		
+		cnt = namedParameterJdbcTemplate
+				.batchUpdate(MessageTransferSql.CHANGE_TRANSFER_SATAUS, params);
+		
+		return cnt;
+	}
 }

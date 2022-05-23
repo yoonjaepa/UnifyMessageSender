@@ -2,17 +2,18 @@ package com.jds.umsender.vo;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 import java.util.UUID;
 
 import com.jds.umsender.common.JsonUtil;
 import com.jds.umsender.common.TransferStatusCode;
 
-import lombok.Data;
+
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
-import lombok.experimental.Delegate;
+
 
 @ToString
 @Getter
@@ -26,13 +27,15 @@ public class MessageTransferListVO extends BaseAuditVO {
 	private int			transferSeqNo;
 	private String		transferStatusCd = "TR010";
 	private String		transferStatusName;
-	@Delegate
 	private List<TransferStatusVO> transferStatusHistList= new ArrayList<TransferStatusVO>();
 	private String		transferStatusHist;
 	private String		messageTitle;
 	private String		messageContent;
 	private String		errorCd;
 	private String		errorDetail;
+	private Map<String, String> mediaConfigInfo;
+	private Map<String, String>	recieverInfo;
+	private Map<String, String> senderInfo;
 	
 	public MessageTransferListVO() {
 		addTransferStatusHistList(TransferStatusCode.REQUEST_RECEIVE.getTransCode(),

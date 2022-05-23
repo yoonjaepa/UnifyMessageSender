@@ -4,5 +4,5 @@ import com.jds.umsender.vo.RequestMasterVO;
 
 public interface IfTemplateMessageSender {
 	
-	public  void	sendMessage(RequestMasterVO request);
+	public  void	sendMessages(RequestMasterVO request);
 }

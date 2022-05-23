@@ -18,20 +18,24 @@ import lombok.extern.slf4j.Slf4j;
 
 @SpringBootTest
 @Slf4j
-class TestMessageSender {
+class TestEmailMessageSender {
 
 	@Autowired
-	EmailMessageSender sender;
+	ThundermailMessageSender sender;
 	
 	RequestMasterVO request;
 	
 	@Test
-	void TestSendMessage() {
+	void TestSendMessages() {
 	
+		log.info("Start TestSendMessages");
 		//RequestDetailVO detail = request.getRequestDetail()[0];
 		
-		sender.sendMessage(request);
+		log.info(request.toString());
 		
+		sender.sendMessages(request);
+		
+		log.info("End TestSendMessages");
 		
 		
 	}
@@ -61,13 +65,13 @@ class TestMessageSender {
 				+ "    	},\n"
 				+ "	\"templateVariable\":{\n"
 				+ "		\"custName\":\"송정근\",\n"
-				+ "		\"custEmail\":\"http://METAROUNGE.KT.COM\",\n"
-				+ "		\"custTelNo\":\"KT001\"\n"
+				+ "		\"custEmail\":\"bal0601@kt.com\",\n"
+				+ "		\"custTelNo\":\"01099020500\"\n"
 				+ "		},\n"
 				+ "    \"senderInfo\":{\n"
 				+ "      	\"senderName\":\"MetaLounge\",\n"
-				+ "      	\"senderEmail\":\"meta@kt.com\",\n"
-				+ "      	\"returnEmail\":\"return@kt.com\"\n"
+				+ "      	\"senderEmail\":\"thundermail@andwise.com\",\n"
+				+ "      	\"returnEmail\":\"thundermail@andwise.com\"\n"
 				+ "    	}\n"
 				+ "	},\n"
 				+ "	{\n"
@@ -76,21 +80,42 @@ class TestMessageSender {
 				+ "    \"templateCd\":\"T0001\",\n"
 				+ "    \"messageTitle\":\"초대메일\",\n"
 				+ "    \"recieverInfo\":{\n"
-				+ "  		\"receiverEmail\":\"yoonjaepa@gmail.com\",\n"
-				+ "      	\"receiverName\":\"강정근\",\n"
+				+ "  		\"receiverEmail\":\"kimwkdy@naver.com\",\n"
+				+ "      	\"receiverName\":\"김현정\",\n"
 				+ " 	 	\"pw\":\"new1234\"  \n"
 				+ "    },\n"
 				+ "	\"templateVariable\":{\n"
-				+ "		\"custName\":\"송윤재\",\n"
-				+ "		\"custEmail\":\"http://METAROUNGE.KT.COM\",\n"
-				+ "		\"custTelNo\":\"KT001\"\n"
+				+ "		\"custName\":\"김현정\",\n"
+				+ "		\"custEmail\":\"kimwkdy@naver.com\",\n"
+				+ "		\"custTelNo\":\"010-9902-0500\"\n"
 				+ "		},\n"
 				+ "    \"senderInfo\":{\n"
 				+ "      	\"senderName\":\"MetaLounge\",\n"
-				+ "      	\"senderEmail\":\"meta@kt.com\",\n"
-				+ "      	\"returnEmail\":\"return@kt.com\"\n"
+				+ "      	\"senderEmail\":\"bal0601@kt.com\",\n"
+				+ "      	\"returnEmail\":\"thundermail@andwise.com\"\n"
 				+ "    	}      \n"
-				+ "	}\n"
+				+ "	},\n"
+				+ "	{\n"
+				+ "	\"messageNo\":3,\n"
+				+ "    \"mediaTypeCd\":\"MD001\",\n"
+				+ "    \"templateCd\":\"T0001\",\n"
+				+ "    \"messageTitle\":\"초대메일\",\n"
+				+ "    \"recieverInfo\":{\n"
+				+ "  		\"receiverEmail\":\"hyun.jung.kim@kt.com\",\n"
+				+ "      	\"receiverName\":\"김현정\",\n"
+				+ " 	 	\"pw\":\"new1234\"  \n"
+				+ "    },\n"
+				+ "	\"templateVariable\":{\n"
+				+ "		\"custName\":\"김현정\",\n"
+				+ "		\"custEmail\":\"khyun.jung.kim@kt.com\",\n"
+				+ "		\"custTelNo\":\"010-9902-0500\"\n"
+				+ "		},\n"
+				+ "    \"senderInfo\":{\n"
+				+ "      	\"senderName\":\"MetaLounge\",\n"
+				+ "      	\"senderEmail\":\"thundermail@andwise.com\",\n"
+				+ "      	\"returnEmail\":\"thundermail@andwise.com\"\n"
+				+ "    	}      \n"
+				+ "	}\n"		
 				+ "	]\n"
 				+ "}\n"
 				+ "";
