@@ -20,7 +20,7 @@ import com.jds.umsender.vo.RequestMasterVO;
 @Configuration
 public class KafkaConsumerConfig {
 	
-	@Value("${kafka.bootstrapAddress}")
+	@Value("${spring.kafka.bootstrap-servers}")
 	private String bootstrapAddress;
 	
 	@Value("${kafka.my.push.topic.group.name}")
