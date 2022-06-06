@@ -20,10 +20,10 @@ public class RequestDetailVO extends BaseAuditVO {
 	private String		mediaTypeCd;
 	private String		templateCd;
 	private String		messageTitle;
-	private Map<String, String>	recieverInfo;
+	private Map<String, String>	receiverInfo;
 	private Map<String, String>	templateVariable;
 	private Map<String, String> senderInfo;
-	private String		recieverInfoJson;
+	private String		receiverInfoJson;
 	private	String		templateVariableJson;
 	private String		senderInfoJson;
 	private String		messageContents;
@@ -35,10 +35,10 @@ public class RequestDetailVO extends BaseAuditVO {
 		
 	}
 	
-	public void setRecieverInfo(Map<String, String> map) {
-		this.recieverInfo = map;
+	public void setReceiverInfo(Map<String, String> map) {
+		this.receiverInfo = map;
 		
-		setRecieverInfoJson(JsonUtil.object2Json(map));
+		setReceiverInfoJson(JsonUtil.object2Json(map));
 	}
 	
 	public void setTemplateVariable(Map<String, String> map) {

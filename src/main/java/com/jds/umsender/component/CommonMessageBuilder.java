@@ -124,7 +124,7 @@ public class CommonMessageBuilder {
 					message.setMediaConfigInfo(mediaInfo.getMediaConfigInfo());
 					
 					//	Receiver 정보 세팅
-					message.setRecieverInfo(detail.getRecieverInfo());
+					message.setRecieverInfo(detail.getReceiverInfo());
 					
 					//	Sender 정보 세팅
 					message.setSenderInfo(detail.getSenderInfo());					

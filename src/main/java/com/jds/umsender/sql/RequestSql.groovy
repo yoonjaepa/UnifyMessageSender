@@ -87,7 +87,7 @@ class RequestSql {
 						,:mediaTypeCd       
 						,:templateCd        
 						,:messageTitle      
-						,:recieverInfoJson      
+						,:receiverInfoJson      
 						,:templateVariableJson  
 						,:senderInfoJson
 						,:messageContents   
